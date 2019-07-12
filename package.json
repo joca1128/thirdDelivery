@@ -1,0 +1,22 @@
+{
+  "name": "terceraentrega",
+  "version": "1.0.0",
+  "description": "tercera entrega individual",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "bootstrap": "^4.3.1",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "hbs": "^4.0.4",
+    "memorystore": "^1.6.1",
+    "mongoose": "^5.6.2",
+    "path": "^0.12.7"
+  }
+}

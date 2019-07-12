@@ -1,0 +1,63 @@
+{{>header}}
+{{#if nombre}}
+    
+        <h2>El curso creado tiene nombre {{nombre}}</h2>
+        <h2>El curso creado tiene id {{id}}</h2>
+        <h2>El curso creado tiene valor {{valor}}</h2>
+        <h2>El curso creado tiene descripcion {{descripcion}}</h2>
+        <h2>El curso creado tiene modalidad {{modalidad}}</h2>  
+        
+{{else}}
+    {{#if err}}
+    <br><br>
+    <div class="bg-danger text-center">
+        <h2>Ya hay un curso creado con ese ID</h2>
+    </div>
+    {{else}}
+<br>
+    <div class="container bg-dark">
+        <form action="/crear" method="post">
+            <div class="form-row">
+                <div class="col">
+                    <label class="text-white">Nombre del Curso</label>
+                    <input name="nombre" type="text" class="form-control" placeholder="Nombre del curso" required>
+                </div>
+                <div class="col">
+                    <label class="text-white">Código</label>
+                    <input name="id" min="0" type="Number" class="form-control" placeholder="Código del curso" required>
+                </div>
+                <div class="col">
+                    <label class="text-white">Valor del curso</label>
+                    <input name="valor" type="Number" min="0" class="form-control" placeholder="Valor del curso" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label class="text-white">Modalidad</label>
+                    <select name="modalidad" class="form-control">
+                        <option label="Escoja una modalidad"></option>
+                        <option value="Virtual">Virtual</option>
+                        <option value="Presencial">Presencial</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label class="text-white">Intensidad Horaria</label>
+                    <input name="intensidad" type="number" min="0"  class="form-control" placeholder="Horas a gastar en el curso">
+                </div>
+                <div class="col">
+                    <label class="text-white">Descripción del curso</label>
+                    <input name="descripcion" type="text" class="form-control" placeholder="Pequeña descripción del curso" required>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col">
+                    <br>
+                    <button class="btn btn-primary" type="submit">Registrar Curso</button>
+                </div>
+            </div>
+            <br>
+        </form>
+    </div>
+    {{/if}}  
+{{/if}}
+{{>footer}}

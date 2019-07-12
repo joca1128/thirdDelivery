@@ -1,0 +1,52 @@
+{{>header}}
+{{#if error}}
+    <h1>{{error}}</h1>
+{{else}}
+    {{#if nombre}}
+    <div class="text-center">
+        <h1><i>El usuario creado se llama {{nombre}}</i></h1>
+        <h1>El usuario creado tiene identidad {{identidad}}</h1>
+        <h1>El usuario creado tiene correo {{correo}}</h1>
+        <h1>El usuario creado tiene telefono {{telefono}}</h1>
+        <h1>El usuario creado es un {{tipo}}</h1>
+    </div>
+    {{else}}
+        <br>
+        {{#if session}}
+        {{else}}
+    <div class="container bg-dark">
+        <br>
+        <form action="/" method="post">
+            <div class="form-row">
+                <div class="col">
+                    <label class="text-white">Nombre del Usuario</label>
+                    <input name="nombre" type="text" class="form-control" placeholder="Nombre del Usuario" required>
+                </div>
+                <div class="col">
+                    <label class="text-white">Identificación</label>
+                    <input name="identidad" min="0" type="Number" class="form-control" placeholder="Identificación del Usuario" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label class="text-white">Correo</label>
+                    <input name="correo" type="email" class="form-control" placeholder="Correo del Usuario" required>
+                </div>
+                <div class="col">
+                    <label class="text-white">Teléfono</label>
+                    <input name="telefono" min="0" type="Number" class="form-control" placeholder="Teléfono del Usuario" required>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col">
+                    <br>
+                    <button class="btn btn-primary" type="submit">Registrar Usuario</button>
+                </div>
+            </div>
+            <br>
+        </form>
+    </div>
+    {{/if}}
+    {{/if}}
+{{/if}}
+{{>footer}}

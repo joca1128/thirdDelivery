@@ -1,0 +1,28 @@
+{{>header}}
+<br>
+<div class="container text-center bg-dark rounded">
+    <h2 class="text-white">Eliminar curso</h2>
+    <form action="/verCursos" method="post">
+        <div class="form-row">
+            <div class="col-sm-6">
+                <label class="text-white">Nombre de la asignatura a Eliminar</label>
+                <select class="form-control" name="id" required>
+                    <option label="Escoja un Curso de la Lista"></option>
+                    {{{desplegarCursos cursos}}}
+                </select>
+            </div>
+            <div class="col-sm-6">
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+            </div>
+        </div>
+    </form>
+    <br>
+</div>
+<br><br>
+<div class="container">
+    {{{MostrarCursosEstudiantes estudiantes cursos}}}
+</div>
+<br><br>
+
+
+{{>footer}}

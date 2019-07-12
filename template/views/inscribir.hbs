@@ -1,0 +1,58 @@
+{{>header}}
+<br>
+{{#if nombre}}
+        <h2>El estudiante creado tiene nombre {{nombre}}</h2>
+        <h2>El estudiante creado tiene documento {{documento}}</h2>
+        <h2>El estudiante creado tiene correo {{correo}}</h2>
+        <h2>El estudiante creado tiene telefono {{telefono}}</h2>
+        <h2>El estudiante creado esta en el curso con id {{curso}}</h2>   
+{{else}}
+    {{#if err}}
+        <br><br>
+        <div class="bg-danger text-center">
+            <h2>No se pudo hacer la inscripción al curso deseado</h2>
+            <h2>{{err}}</h2>
+        </div>
+    {{else}}
+        <div class="container bg-dark border border-dark">
+                <form action="/inscribir" method="post">
+                    <div class="form-row">
+                        <div class="col">
+                            <label class="text-white">Nombre del Estudiante</label>
+                            <input name="nombre" type="text" class="form-control" placeholder="Nombre del estudiante" required>
+                        </div>
+                        <div class="col">
+                            <label class="text-white">Identificación</label>
+                            <input name="documento" min="0" type="Number" class="form-control" placeholder="Identificación del estudiante" required>
+                        </div>
+                        <div class="col">
+                            <label class="text-white">Correo Electrónico</label>
+                            <input name="correo" type="email" class="form-control" placeholder="Correo del Estudiante" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label class="text-white">Curso</label>
+                            <select name="curso" class="form-control" required>
+                                <option label="Escoja un Curso de la lista"></option>
+                                {{{desplegarCursos listado}}}
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label class="text-white">Teléfono</label>
+                            <input name="telefono" type="number" min="0"  class="form-control" placeholder="Teléfono del estudiante" required>
+                        </div>
+
+                    </div>
+                    <div class="row text-center">
+                        <div class="col">
+                            <br>
+                            <button class="btn btn-primary" type="submit">Registrar Estudiante</button>
+                        </div>
+                    </div>
+                    <br>
+                </form>
+            </div>
+    {{/if}}
+{{/if}}
+{{>footer}}
