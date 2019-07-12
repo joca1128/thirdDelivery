@@ -6,7 +6,7 @@ if (process.env.NODE_ENV === 'local'){
 	urlDB = 'mongodb://localhost:27017/educacion';
 }
 else {
-	urlDB = 'mongodb+srv://Jorge:<password>@nodejsjorge-g2uif.mongodb.net/educacion?retryWrites=true&w=majority'
+	urlDB = 'mongodb+srv://Jorge:udea90061957528@nodejsjorge-g2uif.mongodb.net/educacion?retryWrites=true&w=majority'
 }
 
 process.env.URLDB = urlDB
