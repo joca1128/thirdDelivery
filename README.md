@@ -15,11 +15,22 @@
 3. Para ingresar al administrador se usa el siguiente password y nombre
 ```bash
     EL administrador tiene nombre Jorge y contraseña=1128
+    Hay un aspirante que tiene nombre Juan y contraseña 1234567
 ``` 
-4. El programa solose abre en la página de inicio para 
+4. Solo se puede accesar a los roles desde la barra de navegación en el formulario al costado izquierdo de la página 
+```bash
+    Nombre [   ]  Contraseña [    ]
+```  
+5. Cuando se registra un usuario la cedula o identificación queda siendo la constraseña del usuario y el nombre de usuario es el registrado como nombre anteriormente, entonces después de registrar a alguien como aspirante, para ingresar se diligencia el formulario así:
+```bash
+    Nombre [nombre del registro]  Contraseña [número de identificación]
+```  
+6. El programa solo se abre en la página de inicio para 
 ```bash
     localhost:3000
 ```  
-5. Si hay algún tipo de cambio en el script de su parte y esta usando nodemon, salir del nodemon con ctr +c
-y luego darle s, y volver a iniciar el node, ademas iniciar en la página del index, en el 
-localhost:3000
+7. Para abrir desde heroku se usa:
+```bash
+    https://cursos-nodejs.herokuapp.com
+```  
+8. Si tiene alguna pregunta acerca de como funciona la página por favor escribir a 3225731891 por whatsapp, estaré atento a cualquier pregunta.
